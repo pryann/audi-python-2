@@ -53,7 +53,7 @@ def remove_user(id):
         users.remove(user)
 
 
-def uptade_user(id, updated_user):
+def update_user(id, updated_user):
     user = find_user(id)
     if user is not None:
         index = users.index(user)
@@ -66,5 +66,5 @@ def uptade_user(id, updated_user):
 #     {"id": 6, "first_name": "New", "last_name": "User", "email": "newuser@gmail.com"}
 # )
 remove_user(1)
-uptade_user(2, {"first_name": "Johnny"})
+update_user(2, {"first_name": "Johnny"})
 print(users)

@@ -1,4 +1,5 @@
 def generate_new_id(items):
+    # if items is empty, set new id to 1
     return max(item["id"] for item in items) + 1
 
 
@@ -20,13 +21,13 @@ def create_item(item, items):
 
 
 def remove_item(id, items):
-    item = find_item(id)
+    item = find_item(id, items)
     if item is not None:
         items.remove(item)
 
 
 def update_item(id, updated_item, items):
-    item = find_item(id)
+    item = find_item(id, items)
     if item is not None:
         index = items.index(item)
         items[index].update(updated_item)
